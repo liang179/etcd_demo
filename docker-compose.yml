@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  etcd:
+    hostname: etcd
+    image: bitnami/etcd
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - ETCD_ADVERTISE_CLIENT_URLS=http://0.0.0.0:2379
+    ports:
+      - "2379:2379"
+      - "2380:2380"
+
+  etcdkeeper:
+    hostname: etcdkeeper
+    image: evildecay/etcdkeeper:v0.7.6
+    ports:
+      - "8099:8080"

@@ -1,0 +1,3 @@
+### get etcd info
+GET http://localhost:2379/version
+
