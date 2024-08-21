@@ -13,6 +13,6 @@ services:
 
   etcdkeeper:
     hostname: etcdkeeper
-    image: evildecay/etcdkeeper:v0.7.6
+    image: evildecay/etcdkeeper
     ports:
       - "8099:8080"
